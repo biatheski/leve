@@ -1,0 +1,802 @@
+//  Empresa  : BEW Sistemas
+//  Autores  : Binho
+//  Sistema  : ASCENT - Compras, Estoque, Vendas, Caixa
+//  Programa : Cart„o Ponto
+//  Data     : 13/05/98 - 09:23
+
+#include "Sistemas.ch"
+
+if NetUse( "ReprARQ", .t., 30 )
+  VerifIND( "ReprIND1" )
+  VerifIND( "ReprIND2" )
+  
+  lOpenRepr := .t.
+  
+  set index to ReprIND1, ReprIND2
+else
+  lOpenRepr := .f.  
+endif
+
+if NetUse( "PontARQ", .t., 30 )
+  VerifIND( "PontIND1" )
+  VerifIND( "PontIND2" )
+  
+  lOpenPont := .t.
+
+  set index to PontIND1, PontIND2
+else
+  lOpenPont := .f.
+endif
+
+cRepr  := space(04)
+cSequ  := space(02)
+nRepr  := nSequ := 0
+dData  := date()
+cHora  := space(05)
+cMsg   := 'Passe Cart„o na leitora optica'
+cAjuda := 'Pont'
+
+Janela ( 06, 16, 14, 59, 'Cart„o Ponto', .f. )
+setcolor( CorJanel + ',' + CorCampo )
+@ 08,17 say 'Cód.'
+@ 08,22 say 'Funcion rio'
+@ 08,42 say 'Data'
+@ 08,54 say 'Hora'
+@ 09,16 say chr(195) + replicate( chr(196), 42 ) + chr(180)
+@ 09,21 say chr(194)
+@ 09,41 say chr(194)
+@ 09,53 say chr(194)
+for nJ := 10 to 13
+  @ nJ,21 say chr(179)
+  @ nJ,41 say chr(179)
+  @ nJ,53 say chr(179)
+next
+@ 14,21 say chr(193)
+@ 14,41 say chr(193)
+@ 14,53 say chr(193)
+
+select ReprARQ
+set order    to 1
+
+select PontARQ
+set order    to 1
+set relation to Repr into ReprARQ
+
+do while lastkey() != K_ESC
+  Mensagem ( cMsg )
+
+  cTecla := Teclar(0)
+
+  do case
+    case cTecla == K_F1;         Ajuda ()
+    case cTecla >= 48 .and. cTecla <= 57;   EntrPont()
+  endcase
+enddo  
+
+//
+// Entra com o código de barra
+//
+function EntrPont()
+
+  nLin  := 10
+  cRepr := space(04)
+  
+  setcolor( CorJanel )
+  for nK := 10 to 13
+    @ nK, 17 say space(04)
+    @ nK, 22 say space(19)
+    @ nK, 42 say space(10)
+    @ nK, 54 say space(05)
+  next
+  
+  @ nLin,017 get cRepr
+  read
+
+  if lastkey() == K_ESC
+    return NIL
+  endif  
+     
+  select ReprARQ
+  set order to 1
+  dbseek( cRepr, .f. )
+  
+  cNome := Nome
+
+  if eof()
+    select PontARQ
+    set order to 1
+  
+    Alerta( space(39) + 'Funcion rio Não est  cadastrado !!!' ) 
+    return NIL
+  else 
+    dData := date()
+    cHora := time()
+    
+    do case 
+      case dow( dData ) == 1                        // Domingo
+        cIniTur := DomIniTur
+        cIniAlm := DomIniAlm
+        cTerAlm := DomTerAlm
+        cTerTur := DomTerTur
+      case dow( dData ) == 2                        // Segunda
+        cIniTur := SegIniTur
+        cIniAlm := SegIniAlm
+        cTerAlm := SegTerAlm
+        cTerTur := SegTerTur
+      case dow( dData ) == 3                        // Terça  
+        cIniTur := TerIniTur
+        cIniAlm := TerIniAlm
+        cTerAlm := TerTerAlm
+        cTerTur := TerTerTur
+      case dow( dData ) == 4                        // Quarta 
+        cIniTur := QuaIniTur
+        cIniAlm := QuaIniAlm
+        cTerAlm := QuaTerAlm
+        cTerTur := QuaTerTur
+      case dow( dData ) == 5                        // Quinta 
+        cIniTur := QuiIniTur
+        cIniAlm := QuiIniAlm
+        cTerAlm := QuiTerAlm
+        cTerTur := QuiTerTur
+      case dow( dData ) == 6                        // Sexta
+        cIniTur := SexIniTur
+        cIniAlm := SexIniAlm
+        cTerAlm := SexTerAlm
+        cTerTur := SexTerTur
+      case dow( dData ) == 7                        // Sabado
+        cIniTur := SabIniTur
+        cIniAlm := SabIniAlm
+        cTerAlm := SabTerAlm
+        cTerTur := SabTerTur
+    endcase
+  endif  
+  
+  if cIniTur == '00:00' .and. cIniAlm == '00:00'
+    nVezes := 1
+  else  
+    nVezes := 3
+  endif  
+   
+  cHorIniTur := space(05)  
+  cHorIniAlm := space(05)  
+  cHorTerAlm := space(05)  
+  cHorTerTur := space(05)  
+  nQtde      := 0
+  nSequ      := 0
+    
+  select PontARQ
+  set order to 1
+  dbseek( cRepr + dtos( dData ), .f. )
+  if found ()
+    do while Repr == cRepr .and. Data == dData .and. !eof()
+      @ nLin, 17 say cRepr              pict '9999'
+      @ nLin, 22 say cNome              pict '@S19' 
+      @ nLin, 42 say Data               pict '99/99/99'
+      @ nLin, 54 say Hora               pict '99:99'
+
+      nSequ := val( Sequ )
+      nQtde ++
+      nLin  ++
+      
+      if nQtde > nVezes
+        Alerta( 'A qtde. de  Saídas/Entradas  ‚  maiorque o registrado no quadro de hor riodo funcion rio !' )
+        return NIL
+      endif     
+      
+      dbskip ()
+    enddo
+
+    nQtde ++
+    @ nLin, 17 say cRepr              pict '9999'
+    @ nLin, 22 say cNome              pict '@S19' 
+    @ nLin, 42 say dData              pict '99/99/99'
+    @ nLin, 54 say cHora              pict '99:99'
+  else
+    ReprARQ->(dbseek(cRepr)) 
+    
+    @ nLin, 17 say cRepr              pict '9999'
+    @ nLin, 22 say ReprARQ->Nome      pict '@S19' 
+    @ nLin, 42 say dData              pict '99/99/99'
+    @ nLin, 54 say cHora              pict '99:99'
+
+    nQtde ++
+  endif
+
+  ReprARQ->(dbseek(cRepr)) 
+  
+  do case
+    case nQtde == 1
+      Alerta( space(37) + padc( 'Bom Dia !, ' + left( ReprARQ->Nome, at( " ", ReprARQ->Nome ) ), 37 ), 2 )
+    case nQtde == 2
+      Alerta( space(37) + padc( 'Bom Almoço !, ' + left( ReprARQ->Nome, at( " ", ReprARQ->Nome ) ), 37 ), 2 )
+    case nQtde == 3
+      Alerta( space(37) + padc( 'Boa Tarde !, ' + left( ReprARQ->Nome, at( " ", ReprARQ->Nome ) ), 37 ), 2 )
+    case nQtde == 4
+      Alerta( space(37) + padc( 'Boa Noite !, ' + left( ReprARQ->Nome, at( " ", ReprARQ->Nome ) ), 37 ), 2 )
+  endcase     
+    
+  nSequ ++
+  cSequ := strzero( nSequ, 2 ) 
+  
+  select PontARQ
+  set order to 1     
+  if AdiReg(30)
+    if RegLock(30)
+      replace Sequ            with cSequ
+      replace Repr            with cRepr
+      replace Data            with dData
+      replace Hora            with cHora
+      dbunlock ()
+    endif  
+  endif
+return NIL
+
+//
+// Alterar Cart„o Ponto
+//
+function AltePont ()
+  if NetUse( "ReprARQ", .t., 30 )
+    VerifIND( "ReprIND1" )
+    VerifIND( "ReprIND2" )
+  
+    lOpenRepr := .t.
+  
+    set index to ReprIND1, ReprIND2
+  else
+    lOpenRepr := .f.  
+  endif
+
+  if NetUse( "PontARQ", .t., 30 )
+    VerifIND( "PontIND1" )
+    VerifIND( "PontIND2" )
+  
+    lOpenPont := .t.
+
+    set index to PontIND1, PontIND2
+  else
+    lOpenPont := .f.
+  endif
+
+  tAltera := savescreen( 00, 00, 23, 79 )
+
+  Janela ( 06, 16, 16, 57, 'Alterar Cart„o Ponto', .f. )
+  setcolor( CorCampo )
+  @ 08,35 say space(20)
+    
+  setcolor( CorJanel + ',' + CorCampo )
+  @ 08,18 say 'Funcion rio'
+  @ 10,18 say '        Data       Hora'
+  @ 11,16 say chr(195) + replicate( chr(196), 40 ) + chr(180)
+  @ 11,36 say chr(194)
+  for nJ := 12 to 15
+    @ nJ,36 say chr(179)
+  next
+  @ 16,36 say chr(193)
+ 
+  nRepr  := 0
+  cRepr  := space(04)
+  cAjuda := 'Copi'
+  lAjud  := .t.
+  
+  setcursor(1)
+  @ 08,30 get nRepr        pict '9999'valid ValidARQ( 08, 30, "PontARQ", "Cod.", "Repr", "Descrição", "Nome", "Repr", "nRepr", .t., 4, "Consulta Funcion rios", "ReprARQ", 20 )
+  read
+  
+  if lastkey() == K_ESC
+    if lOpenPont
+      select PontARQ
+      close
+    endif
+    if lOpenRepr 
+      select ReprARQ
+      close
+    endif    
+    restscreen( 00, 00, 23, 79, tAltera )
+    return NIL
+  endif 
+  
+  cRepr := strzero( nRepr, 4 )
+      
+  select PontARQ 
+  set order to 1
+  bFirst := {|| dbseek( cRepr, .t. ) }
+  bLast  := {|| dbseek( cRepr, .t. ), dbskip(-1) }
+  bFor   := {|| Repr == cRepr }
+  bWhile := {|| Repr == cRepr }
+ 
+  oCartao         := TBrowseFW( bWhile, bFor, bFirst, bLast )
+  oCartao:nTop    := 10
+  oCartao:nLeft   := 18
+  oCartao:nBottom := 15
+  oCartao:nRight  := 50
+  oCartao:headsep := chr(194)+chr(196)
+  oCartao:colsep  := chr(179)
+
+  oCartao:addColumn( TBColumnNew("Data",  {|| Data } ) )
+  oCartao:addColumn( TBColumnNew("Hora",  {|| Hora } ) )
+            
+  lExitRequested := .f.
+  lAdiciona      := .f.
+  lAltera        := .f.
+  cSequ          := space(02)
+  nSequ          := 0
+  
+  setcolor( CorJanel )
+  @ 11,16 say chr(218)
+  @ 11,57 say chr(199)
+  
+  oCartao:gobottom()
+  oCartao:refreshAll()
+
+  do while !lExitRequested
+    Mensagem( 'DELETE Apagar, ESC retorna' ) 
+ 
+    oCartao:forcestable()
+    
+    cTecla := Teclar(0)
+
+    if oCartao:hitTop .or. oCartao:hitBottom
+      tone( 125, 0 )
+    endif
+
+    do case
+      case cTecla == K_DOWN;        oCartao:down()
+      case cTecla == K_UP;          oCartao:up()
+      case cTecla == K_PGUP;        oCartao:pageUp()
+      case cTecla == K_CTRL_PGUP;   oCartao:goTop()
+      case cTecla == K_PGDN;        oCartao:pageDown()
+      case cTecla == K_CTRL_PGDN;   oCartao:goBottom()
+      case cTecla == K_RIGHT;       oCartao:right()
+      case cTecla == K_LEFT;        oCartao:left()
+      case cTecla == K_HOME;        oCartao:home()
+      case cTecla == K_END;         oCartao:end()
+      case cTecla == K_CTRL_LEFT;   oCartao:panLeft()
+      case cTecla == K_CTRL_RIGHT;  oCartao:panRight()
+      case cTecla == K_CTRL_HOME;   oCartao:panHome()
+      case cTecla == K_CTRL_END;    oCartao:panEnd()
+      case cTecla == K_ESC;         lExitRequested := .t.
+      case cTecla == 46;            lExitRequested := .t.
+      case cTecla == K_DEL
+        if RegLock(30)
+          dbdelete ()
+          dbunlock ()
+        endif  
+
+        oCartao:refreshAll()  
+    endcase
+  enddo
+  
+  if lOpenPont
+    select PontARQ
+    close
+  endif
+  if lOpenRepr
+    select ReprARQ
+    close
+  endif    
+  restscreen( 00, 00, 23, 79, tAltera )
+return NIL
+
+//
+// Cart„o Ponto
+//
+function PrinPont()
+
+  local cArqu2 := CriaTemp( 5 )
+  local cArqu3 := right ( cArqu2, 8 )
+
+  local cRData := date()
+  local cRHora := time()
+
+  if NetUse( "ReprARQ", .t., 30 )
+    VerifIND( "ReprIND1" )
+    VerifIND( "ReprIND2" )
+
+    set index to ReprIND1, ReprIND2
+  endif
+
+  if NetUse( "PontARQ", .t., 30 )
+    VerifIND( "PontIND1" )
+    VerifIND( "PontIND2" )
+
+    set index to PontIND1, PontIND2
+  endif
+
+  if NetUse( "ImprARQ", .t., 30 )
+    VerifIND( "ImprIND1" )
+    VerifIND( "ImprIND2" )
+
+    set index to ImprIND1, ImprIND2
+  endif
+
+  if NetUse( "SpooARQ", .t., 30 )
+    VerifIND( "SpooIND1" )
+
+    set index to SpooIND1
+  endif
+
+  tPrt := savescreen( 00, 00, 23, 79 )
+  
+  Janela ( 07, 13, 11, 67, 'Seleção de Funcion rios', .f.)
+
+  setcolor ( CorJanel + ',' + CorCampo )
+  @ 09,15 say '    Data Inicial               Data Final'
+  @ 10,15 say 'Funcion. Inicial           Funcion. Final'
+  
+  select ReprARQ
+  set order to 1
+  dbgotop ()
+  nReprIni := val( Repr )
+  dbgobottom ()
+  nReprFin := val( Repr )
+
+  select PontARQ
+  set order to 1
+  dbgotop ()
+  dDataIni := date() - 30
+  dDataFin := date()
+  
+  set cursor on
+
+  @ 09,32 get dDataIni   pict '99/99/99'
+  @ 09,57 get dDataFin   pict '99/99/99'   valid dDataFin >= dDataIni
+  @ 10,32 get nReprIni   pict '9999'       valid ValidARQ( 99, 99, "ReprARQ", "Cod.", "Repr", "Descrição", "Nome", "Repr", "nReprIni", .t., 4, "Consulta de Vendedores", "ReprARQ", 40 )  
+  @ 10,57 get nReprFin   pict '9999'       valid ValidARQ( 99, 99, "ReprARQ", "Cod.", "Repr", "Descrição", "Nome", "Repr", "nReprFin", .t., 4, "Consulta de Vendedores", "ReprARQ", 40 ) .and. nReprFin >= nReprIni 
+  read
+
+  if lastkey() == K_ESC
+    select PontARQ
+    close
+    select ReprARQ
+    close
+    select SpooARQ
+    close
+    select ImprARQ
+    close
+    restscreen( 00, 00, 23, 79, tPrt )
+    return NIL
+  endif
+
+  Aguarde ()
+  
+  nPag        := 1
+  nLin        := 0
+  cArqu2      := cArqu2 + "." + strzero( nPag, 3 )
+
+  cReprIni    := strzero( nReprIni, 4 )
+  cReprFin    := strzero( nReprFin, 4 )
+  cReprAnt    := space(04)
+  lInicio     := .t.
+  
+  select PontARQ
+  set order    to 2
+  set relation to Repr into ReprARQ
+  dbseek( dtos( dDataIni ), .t. )
+  do while Data >= dDataIni .and. Data <= dDataFin .and. !eof ()
+    if Repr >= cReprIni .and. Repr <= cReprFin 
+      if lInicio
+        set printer to ( cArqu2 )
+        set device  to printer
+        set printer on
+
+        lInicio := .f.
+      endif  
+    
+      if nLin == 0
+        Cabecalho( 'Cart„o Ponto', 132, 5 )
+        CabPont()
+      endif
+      
+      dData   := Data
+      cRepr   := Repr
+      cNome   := ReprARQ->Nome
+      aHoras  := {}
+    
+      do case 
+        case dow( dData ) == 1;      cDia := 'Domingo'
+          cIniTur := ReprARQ->DomIniTur
+          cIniAlm := ReprARQ->DomIniAlm
+          cTerAlm := ReprARQ->DomTerAlm
+          cTerTur := ReprARQ->DomTerTur
+        case dow( dData ) == 2;      cDia := 'Segunda'
+          cIniTur := ReprARQ->SegIniTur
+          cIniAlm := ReprARQ->SegIniAlm
+          cTerAlm := ReprARQ->SegTerAlm
+          cTerTur := ReprARQ->SegTerTur
+        case dow( dData ) == 3;      cDia := 'Terça' 
+          cIniTur := ReprARQ->TerIniTur
+          cIniAlm := ReprARQ->TerIniAlm
+          cTerAlm := ReprARQ->TerTerAlm
+          cTerTur := ReprARQ->TerTerTur
+        case dow( dData ) == 4;      cDia := 'Quarta'
+          cIniTur := ReprARQ->QuaIniTur
+          cIniAlm := ReprARQ->QuaIniAlm
+          cTerAlm := ReprARQ->QuaTerAlm
+          cTerTur := ReprARQ->QuaTerTur
+        case dow( dData ) == 5;      cDia := 'Quinta'  
+          cIniTur := ReprARQ->QuiIniTur
+          cIniAlm := ReprARQ->QuiIniAlm
+          cTerAlm := ReprARQ->QuiTerAlm
+          cTerTur := ReprARQ->QuiTerTur
+        case dow( dData ) == 6;      cDia := 'Sexta'
+          cIniTur := ReprARQ->SexIniTur
+          cIniAlm := ReprARQ->SexIniAlm
+          cTerAlm := ReprARQ->SexTerAlm
+          cTerTur := ReprARQ->SexTerTur
+        case dow( dData ) == 7;      cDia := 'Sabado'
+          cIniTur := ReprARQ->SabIniTur
+          cIniAlm := ReprARQ->SabIniAlm
+          cTerAlm := ReprARQ->SabTerAlm
+          cTerTur := ReprARQ->SabTerTur
+      endcase
+
+      do while Data == dData .and. Repr == cRepr
+        aadd( aHoras, Hora )
+        dbskip ()
+      enddo     
+      
+      @ nLin,01 say cRepr
+      @ nLin,06 say cNome              pict '@S18'
+      @ nLin,25 say dData              pict '99/99/99'
+      @ nLin,36 say cDia         
+      @ nLin,46 say cIniTur            pict '99:99'
+      @ nLin,55 say cIniAlm            pict '99:99'
+      @ nLin,64 say cTerAlm            pict '99:99'
+      @ nLin,73 say cTerTur            pict '99:99'
+      
+      nCol := 83
+      
+      for nH := 1 to len( aHoras )
+        @ nLin,nCol say aHoras[nH]     pict '99:99'
+        
+        nCol += 9
+      next
+      
+      @ nLin,116 say '_______________'
+      nLin ++
+        
+      if nLin >= pLimite
+        Rodape(132) 
+
+        cArqu2 := left( cArqu2, ( len( cArqu2 ) - 4 ) )
+        cArqu2 := cArqu2 + "." + strzero( nPag, 3 )
+
+        set printer to ( cArqu2 )
+        set printer on
+      endif
+    endif
+  enddo     
+  
+  if !lInicio
+    Rodape(132)
+  endif  
+ 
+  set printer to
+  set printer off
+  set device  to screen
+  set cursor  on
+
+  if Imprimir( cArqu3, 132 )
+    select SpooARQ
+    if AdiReg(30)
+      replace Rela       with cArqu3
+      replace Titu       with "Relatório do Cart„o Ponto"
+      replace Data       with cRData
+      replace Hora       with cRHora
+      replace Usua       with cUsuario
+      replace Tama       with 132
+      replace Empr       with cEmpresa
+      dbunlock ()
+    endif
+  endif  
+    
+  select SpooARQ
+  close
+  select PontARQ
+  close
+  select ReprARQ
+  close
+  select ImprARQ
+  close
+  restscreen( 00, 00, 23, 79, tPrt )
+return NIL
+ 
+function CabPont ()
+  @ 02,01 say 'Período ' + dtoc( dDataIni ) + ' a ' + dtoc( dDataFin )
+  @ 02,53 say 'Hor rio de Trabalho                  Hor rio Trabalhado'
+  @ 03,01 say 'Funcion rio             Data       Dia    Ini.Tur. Ini.Alm. T‚r.Alm. T‚r.Tur.  Ini.Tur. Ini.Alm. T‚r.Alm. T‚r.Tur. Assinatura'
+
+  nLin     := 5
+  cReprAnt := space(4)
+retur NIL
+
+//
+// Cartao Ponto Manual
+//
+function PontManual ()
+  if NetUse( "ReprARQ", .t., 30 )
+    VerifIND( "ReprIND1" )
+    VerifIND( "ReprIND2" )
+  
+    gOpenRepr := .t.
+  
+    set index to ReprIND1, ReprIND2
+  else
+    gOpenRepr := .f.  
+  endif
+
+  if NetUse( "PontARQ", .t., 30 )
+    VerifIND( "PontIND1" )
+    VerifIND( "PontIND2" )
+  
+    gOpenPont := .t.
+
+    set index to PontIND1 PontIND2
+  else
+    gOpenPont := .f.
+  endif
+
+  cRepr   := space(04)
+  cSequ   := space(02)
+  nRepr   := nSequ   := 0
+  dData   := date()
+  cIniTur := cIniAlm := space(05)
+  cTerAlm := cTerTur := space(05)
+
+  Janela ( 05, 13, 14, 63, 'Cart„o Ponto - Manual', .t. )
+  setcolor( CorJanel + ',' + CorCampo )
+  @ 07,15 say 'Funcion rio'
+  @ 08,15 say '       Data'
+  @ 10,15 say '??   Inicio'
+  @ 11,15 say '??    Final'
+
+  MostOpcao( 13, 15, 27, 39, 52 ) 
+  tPont := savescreen( 00, 00, 23, 79 )
+
+  select PontARQ
+  set order to 1
+  if gOpenPont
+    dbgobottom ()
+  endif  
+  do while .t.
+    select ReprARQ
+    set order    to 1
+    
+    select PontARQ
+    set order    to 1
+    set relation to Repr into ReprARQ
+
+    Mensagem('Manutenção no arquivo de cadastro de Ponto, Tecle <ESC> para retornar.')
+
+    restscreen( 00, 00, 23, 79, tPont )
+    cStat := space(4)
+    MostPoMa()
+  
+    if Demo ()
+      exit
+    endif  
+
+    set cursor on
+    setcolor ( CorJanel + ',' + CorCampo )
+
+    MostTudo := 'MostPoMa'
+    cAjuda   := 'PoMa'
+    lAjud    := .t.
+    set key K_PGUP      to MostrARQ()
+    set key K_PGDN      to MostrARQ()
+    set key K_CTRL_PGUP to MostrARQ()
+    set key K_CTRL_PGDN to MostrARQ()
+    set key K_UP        to MostrARQ()
+  
+    @ 07,27 get nRepr     pict '9999'    valid ValidARQ( 07, 27, "PontARQ", "Cod.", "Repr", "Descrição", "Nome", "Repr", "nRepr", .t., 4, "Consulta de Funcion rios", "ReprARQ", 30 )
+    @ 08,27 get dData     pict '99/99/9999'
+    read
+       
+    set key K_PGUP      to 
+    set key K_PGDN      to 
+    set key K_CTRL_PGUP to 
+    set key K_CTRL_PGDN to 
+    set key K_UP        to 
+
+    if lastkey() == K_ESC .or. nRepr == 0
+      set cursor off
+      exit
+    endif
+  
+    setcolor ( CorCampo )
+    cRepr := strzero( nRepr, 4 )
+
+    //  Verificar existencia do Lancamento para Incluir ou Alterar
+    select PontARQ
+    set order to 1
+    dbseek( cRepr + dtos( dData ), .f. )
+    if eof()
+      Mensagem ('Incluir nova Data no Cart„o Ponto, Tecle <ESC> para cancelar.')
+    cStat :=  'incl'
+    else
+      Mensagem ('Alterar dados da Data escolhida do Cart„o Ponto, Tecle <ESC> para cancelar.')
+      cStat :=  'alte'
+    endif
+
+    MostPoMa ()
+    EntrPoMa ()
+
+    Confirmar( 13, 15, 27, 39, 52, 3 ) 
+
+    if cStat == 'excl'
+      ExclRegi ()
+    endif
+
+    if cStat == 'prin'
+      PrinPort(.f.)
+    endif
+
+    if cStat == 'incl'
+      if AdiReg(30)
+        if RegLock(30)
+          replace Repr         with cRepr
+          replace Data         with dData
+          dbunlock ()
+        endif
+      endif
+    endif
+
+    if cStat == 'incl' .or. cStat == 'alte'
+      if RegLock(30)
+//      replace Hora         with cHora 
+        dbunlock ()
+      endif
+    endif
+  enddo
+
+  if gOpenPont
+    select PontARQ
+    close
+  endif
+
+  if gOpenRepr
+    select ReprARQ
+    close
+  endif
+return NIL
+
+//
+// Entra Dados do Cartao
+//
+function EntrPoMa ()
+  setcolor ( CorJanel + ',' + CorCampo )
+  @ 10,27 get cIniTur         pict '99:99' valid ValidHora( cIniTur, "cIniTur" ) 
+  @ 10,33 get cIniAlm         pict '99:99' valid ValidHora( cIniAlm, "cIniAlm" ) 
+  @ 11,27 get cTerAlm         pict '99:99' valid ValidHora( cTerAlm, "cTerAlm" ) 
+  @ 11,33 get cTerTur         pict '99:99' valid ValidHora( cTerTur, "cTerTur" ) 
+  read
+return NIL
+
+//
+// Mostra Dados do Cart„o
+//
+function MostPoMa ()
+  setcolor ( CorCampo )
+  if cStat != 'incl'
+    cRepr := Repr
+    nRepr := val( Repr )
+    dData := Data
+    
+    @ 07,27 say cRepr           pict '9999' 
+    @ 07,32 say ReprARQ->Nome   pict '@S30'
+  endif
+
+//cIniTur := IniTur
+//cIniAlm := IniAlm
+//cTerAlm := TerAlm
+//cTerTur := TerTur
+
+  @ 10,27 say cIniTur           pict '99:99'
+  @ 10,33 say cIniAlm           pict '99:99'
+  @ 11,27 say cTerAlm           pict '99:99'
+  @ 11,33 say cTerTur           pict '99:99'
+
+  PosiDBF( 05, 63 )
+return NIL
+
+

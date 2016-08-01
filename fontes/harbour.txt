@@ -1,0 +1,113 @@
+http://harbourlanguage.blogspot.com.br/2010/02/using-hbmk2.html
+
+${hb_root} diretório de hbmk2
+${hb_dir} diretório de nome de arquivo é usado em
+${hb_dirname} nome do diretório raiz dos arquivos em uso
+${hb_name} é usado para nomear o arquivo (sem diretório e extensão)
+${hb_self} nome completodo arquivo que está em uso
+${hb_curdir} diretório de trabalho atual
+${hb_tempdir} Diretório do Sistema Operacional para arquivos temporários
+${hb_targetname} nome do projeto (sem a diretório e extensão). Retorna .adhoc. se não existir arquivo de projeto.
+${hb_targettype} tipo do projeto (hbexe, hblib, hbdyn, hbdynvm, hbimplib, hbppo, hbhrb, hbcontainer)
+${hb_plat} plataforma selecionada
+${hb_comp} compilador C selecionado
+${hb_comp_ver} versão do compilador C
+${hb_build} nome da construção "build"
+${hb_cpu} CPU selecionada
+${hb_work} nome padrão do diretório base de trabalho
+${hb_workdynsub} subdiretório padrão de trabalho para bibliotecas dinâmicas de destino
+${hb_dynprefix} prefixo de biblioteca dinâmica
+${hb_dynsuffix} sufixo de biblioteca dinâmica
+${hb_dynext} extensão de biblioteca dinâmica
+${hb_ver} Versão do Harbour no formato de tres bytes em hexadecimal. Exemplo: 030200
+${hb_verstr} Versão do Harbour no formato legível por humanos <major>.<minor>.<release><status>. Ex.: 3.2.0dev
+${hb_major} número da versão principal Harbour
+${hb_minor} número da versão secundária Harbour
+${hb_release} número da versão Harbour liberada
+${hb_status} status da versão Harbour
+${hb_revision} revisão Harbour
+${hb_host_plat} plataforma de hospedagem Harbour
+${hb_host_plat_unix} retorna '1' se o Harbour estiver hospedado numa plataforma compatível com *nix
+${hb_bin} diretório de binarios Harbour
+${hb_lib} diretório de bibliotécas estáticas Harbour
+${hb_lib3rd} diretório Harbour de bibliotécas estáticas de terceiros
+${hb_dyn} diretório de bibliotécas dinâmicas Harbour
+${hb_inc} diretório Harbour para header
+${hb_addons} diretório base para complementos "add-ons" Harbour.
+${hb_first} nome do arquivo do fonte que detém a função de entrada (sem diretório e extensão)
+${hb_outputdir} diretório de saída
+${hb_outputname} nome de saída (sem a extensão)
+${hb_level} nível de recursão do sub-projeto
+${<depname>} retorna o diretório header da dependência <depname>, ou ´1´se ela não foi detectada.
+${<envvar>} returna os valores das variáveis de ambiente <envvar>
+
+
+
+# ---------------------------
+02	# Nome do Executável
+03	# ---------------------------
+04	-oteste
+05	# ---------------------------
+06	# Bibliotecas
+07	# ---------------------------
+08	-llibct
+09	-lhbnf
+10	-lhbwin
+11	# ---------------------------
+12	# Caminho dos Includes
+13	# ---------------------------
+14	-incpath=d:\harbour\bcc\include;
+15	# ---------------------------
+16	# Caminho das Libs da MiniGui
+17	# ---------------------------
+18	-Ld:\minigui\lib
+19	-Ld:\minigui\harbour\lib
+20	# ---------------------------
+21	# Outros Parâmetros
+22	# ---------------------------
+23	-workdir=.\OBJ\
+24	-head=full
+25	-n
+26	-dVERSAO_DE_TESTE1
+27	-dVERSAO_DE_TESTE2
+28	-nowarn
+29	-inc
+30	#-icon=.\IMG\PRINT.ICO
+31	#-icon=clock.ico
+32	# ---------------------------
+33	# Prg(s) e Rc(s)
+34	# ---------------------------
+35	teste
+36	# ---------------------------
+37	# Fim
+38	# ---------------------------
+39	 
+
+
+
+
+
+Para complementar o post gostaria de citar os passos que fiz para compilar o Harbour no Ubuntu 12.04 LTS:
+
+1. Baixei o pacote no link: https://github.com/harbour/core/archive/master.zip
+
+2. Extrai o pacote na minha pasta pessoal sem alterar seu nome
+
+3. Abri o terminal
+
+4. Digitei cd harbour-core-master
+
+5. Digitei make
+
+6. Após o término do processo para usar o harbour de qualquer diretório do linux copiei os seguintes arquivos:
+a) Copiar harbour-core-master/bin/linux/gcc para /usr/bin
+b) Copiar harbour-core-master/lib/linux/gcc para /usr/lib/harbour
+c) Copiar harbour-core-master/include para /usr/include/harbour
+OBS: para copiar arquivos para a pasta /usr você precisa estar como root. Para isto digite gksudo nautilus e em seguida a senha do root.
+
+7. Fechei o terminal. Abri novamente. Compilei com hbmk2 incluindo a diretiva -static.
+OBS: ao digitar harbour ou hbmk2 no terminal você verá a versão 3.4.0
+
+Assim o problema de acentos no terminal linux utilizando UTF-8 ficou resolvido.
+
+Substitua os passos 5 e 6 por: sudo make install

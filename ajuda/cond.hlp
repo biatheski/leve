@@ -1,0 +1,33 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Condi‡ƒes de Pagamento Ä
+                                                             
+ Para cadastrar uma nova Condi‡„o de  Pagamento basta digitar
+ o c¢digo referente,a inclus„o ser  autom tica se n„o existir
+ o c¢digo digitado, caso contr rio permitir  a altera‡„o.    
+                                                             
+ Ex.: C¢digo 01                                              
+                                                             
+        Nome 1 + 1                                           
+ Vencimentos 00 30 00 00 00                                  
+ N§ Parcelas (utilizar este campo somente qdo for mais de 10x
+  Vcto. Fixo (utilizar qdo for mais de 10x )                 
+       Acrs. 3,0                                             
+       Indi. Coeficiente de indexacao                        
+      Cheque Habilitando esta op‡„o ap¢s confirmar a venda   
+ ser  possivel cadastrar o(s) cheque recebido.               
+                                                             
+ Vocˆ poder  consultar um produto com todas  as condi‡”es ca-
+ dastradas para isso tecle F2, escolha Produtos, posicione em
+ cima do produto escolhido e tecle ALT+U                     
+                                                             
+ Para tirar tabela de pre‡os com acr‚scimos ou descontos uti-
+ lize a condi‡„o de pagamento:                               
+                                                             
+ Ex.: C¢digo 50                                              
+                                                             
+        Nome PRECO PROMOCAO                                  
+ Vencimentos 00 00 00 00 00                                  
+       Acrs. -10,0                                           
+                                                      Ä Fim Ä
+                                                             

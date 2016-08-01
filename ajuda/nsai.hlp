@@ -1,0 +1,38 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Pedido Ä
+                                                             
+ Para emitir um novo PEDIDO, dever   ser  digitado  o  n£mero
+ referente, se estiver utilizando  em rede,  basta  digitar 0
+ para o sistema  gerar  o n£mero do PEDIDO autom tico. Caso o
+ PEDIDO j  esteja cadastrado, o mesmo, permitir  a altera‡„o.
+                                                             
+ Depois de informada a data,o cursor se posicionar  no BROWSE
+ do PEDIDO. Para incluir os produtos informe o c¢digo do pro-
+ duto, caso  o  c¢digo n„o seja informado abrir  uma consulta
+ com os produtos cadastrados tecle ALT+A para alterar  e  INS
+ para incluir, informando a quantidade o sistema passar  para
+ o pr¢ximo item, tecle . (ponto) para finalizar a inclus„o.  
+                                                             
+ Teclando ESC durante a inclus„o de itens vocˆ  poder  visua-
+ lizar a nota, utilize as setas para movimentar, para alterar
+ algum item tecle ENTER, para excluir tecle DELETE e para en-
+ cerrar tecle . (ponto) "Observe a linha da mensagem"        
+                                                             
+ Vocˆ poder  consultar os produtos de duas maneiras:         
+ 1 - Bastando digitar seu nome ou c¢digo (dependedo da coluna
+     que se encontra a barra luminosa)                       
+ 2 - Escolhendo primeiro seu grupo e subgrupo, a  partir  dos
+     mesmos escolhidos ‚  que  o sistema mostrar  os produtos
+     correspondentes.                                        
+ Para configurar esta op‡„o acesse o menu ğ , submenu  Confi-
+ gura‡”es, item Paramˆtros.                                  
+                                                             
+ A seguir dever  ser informado o DESCONTO, CLIENTE, REPRESEN-
+ TANTE, PAGAMENTO. Se desejar  retornar  aos  itens do Pedido
+ Avance  com  a  seta  para cima. Caso n„o queirar imprimir o
+ Pedido, poder  apenas Confirmar, o  sistema  automaticamente
+ dar  baixa  no  estoque gerando o contas a receber.         
+                                                             
+ Veja Contas a Receber.                                      
+                                                      Ä Fim Ä

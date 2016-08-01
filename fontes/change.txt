@@ -1,0 +1,191 @@
+* 04/09/2006-19:55 Binho <fuabiano@gmail.com>
+
+- VersÆo 0.962
+- CartÆo Ponto (PontARQ);
+  Port.prg
+- Contrato de Licen‡a
+  Menu.prg
+
+* 30/05/2006-18:47 Binho <fuabiano@gmail.com>
+
+- Reindexacao (EstrARQ);
+  Orga.prg
+
+* 28/07/2004-09:36 Binho <fuabiano@gmail.com>
+
+- Cadastro de Empresas (nome);
+  Empr.prg
+- Cliente generico 999999
+  Func.prg
+
+* 25/07/2004-16:24 Binho <fuabiano@gmail.com>
+
+- Reindexacao de Arquivos;
+  Orga.prg
+- Centro de Custo na SubConta;  
+  SubC.prg
+- Impressao de Orcamento;
+  Opro.prg
+- Selecao de Agencias;
+  Func.prg  
+
+* 24/07/2004-18:00 Binho <fuabiano@gmail.com>
+
+- Relatorio de SubContas;
+  SubC.prg
+- Ficha no Cadastro de Cliente Fisica;
+  Fisi.prg
+- Bug gravacao do numero do pedido (automatico)
+  Pedf.prg
+- Importacao de Arquivos
+  Impo.prg
+
+* 22/07/2004-12:14 Binho <fuabiano@gmail.com>
+
+- Mouse desabilitado;
+  Menu.prg
+- Importacao de Arquivos;
+  Impo.prg
+- Ficha de Impressao Cliente;
+  Cons.prg
+
+* 21/07/2004-13:54 Binho <fuabiano@gmail.com>
+
+- Importacao de Arquivos;
+  Impo.prg
+
+* 19/07/2004-06:30 Binho <fuabiano@gmail.com>
+
+- Comissao em Pedidos 
+  Func.prg
+
+* 16/07/2004-07:49 Binho <fuabiano@gmail.com>
+
+- BEW -> BMD e 9904 5857 -> 9988 0516 (empresa/telefone)
+  Libi.prg Menu.prg 
+
+* 15/07/2004-07:01 Binho <fuabiano@gmail.com>
+
+- Estados (Consulta)
+  Libi.prg
+- Importar Itens do Orcamento -> Pedido
+  Nota.prg
+
+* 13/07/2004-07:04 Binho <fuabiano@gmail.com>
+
+- Nota Entrada (Frete)
+  Enot.prg
+- Entrada Alternativa (Browse)
+  Epro.prg
+
+* 12/07/2004-16:35 Binho <fuabiano@gmail.com>
+
+- Impressao Compactada 
+  Libi.prg Nota.prg OPro.prg ...
+
+* 09/07/2004-10:45 Binho <fuabiano@gmail.com>
+
+- Versao 0.963
+- Bug nos Browse de Itens (loop)
+  Pedf.prg Opro.prg Pedi.prg Spro.prg Enot.prg ...
+- Codigo de Barras e Numero de Serie na Composicao
+  Prod.prg
+
+* 06/07/2004-07:01 Binho <fuabiano@gmail.com>
+
+- Escolher Tipo de Fontes (True Type);
+  Menu.prg
+- Cadastro de Representante (Get List);
+  Repr.prg
+- Mascara da Data (ano), 99 -> 9999
+  Todos
+
+* 02/07/2004-00:05 Binho <fuabiano@gmail.com>
+
+- Impressao Pedido (Win Printers);
+  Nota.prg Pedf.prg
+- Impressao diretamente (Modo Texto);
+  Libi.prg
+- Remocao do arquivo de Impressoras;
+  Itme.prg Menu.prg Libi.prg Rcto.prg Opro.prg
+- Impressao Recibos (Win Printers);
+  Rcto.prg
+- Limite e Comando de Impressao;
+  Menu.prg Empr.prg
+- Impressao de Orcamento (Win Printers);
+  OPro.prg
+- Impressao de Abertura OS (Win Printers);
+  AbOS.prg
+- Impressao de Encerramento OS (Win Printers);
+  EnOS.prg
+- Impressao Recibos Abulsos (Win Printers);
+  Lcto.prg
+
+* 01/07/2004-07:29 Binho <fuabiano@gmail.com>
+
+- Versao 0.961
+  Menu.prg
+- Selecao de Impressoras (Win Printers);
+  Libi.prg
+- Itens das Notas (Browse) Bug;
+  ENot.prg Pedi.prg SPro.prg EPro.prg Nota.prg
+
+* 30/06/2004-12:25 Binho <fuabiano@gmail.com>
+
+- Diretorio para o SPOOL de Impressao;
+  Empr.prg Menu.prg Libi.prg
+- Sair do Cartao Tempo;
+  CaTe.prg
+- Janelas de Impressao;
+  SubC.prg Trns.prg Repr.prg 
+- Selecao de Impressoras (Win Printers);
+  Libi.prg TPri.prg
+
+* 29/06/2004-09:20 Binho <fuabiano@gmail.com>
+
+- Selecao do Modelo (arquivo) impressao do Pedido; 
+  PedF.prg Nota.prg
+- Cor Barra de Opcao na Consulta de SubGrupo;
+  func.prg
+
+* 24/06/2004-12:11 Binho <fuabiano@gmail.com>
+
+- Destino do Lancamento no Caixa (descricao); 
+  Caix.prg
+- Operacao de Estoque (GetList)
+  Estq.prg
+
+* 23/06/2004-10:00 Binho <fuabiano@gmail.com>
+
+- Arquivo MenuARQ
+  UsMe.prg
+
+* 21/06/2004-12:26 Binho <fuabiano@gmail.com>
+
+- Configurar Acessos ao Menu;
+  UsMe.prg
+- Consumo de Veiculos;
+  Veic.prg
+- Nome no cadastro de empresas;
+  EstrARQ.dbf
+- Usuário Spool de Impressão;
+  Orga.prg
+- Campo Indice na Reindexação;
+  Orga.prg
+- Consulta Geral F2 (ativa em TODO sistema)
+  Cons.prg Libi.prg
+
+* 17/06/2004-02:00 Binho <fuabiano@gmail.com>
+
+- Relatórios em HTML;
+  Libi.prg  
+
+* 15/06/2004-00:32 Binho <fuabiano@gmail.com>
+
+- Vendedor no cadastro de clientes;
+  Clie.prg Clin.prg Fisi.prg
+- Unidade e Preco de Custo no Produto 999999;
+  Pedf.prg Nota.prg Opro.prg Dpro.prg Spro.prg
+- Consulta de Mensagens;
+  func.prg
+

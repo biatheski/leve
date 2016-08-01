@@ -1,0 +1,27 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Bancos Ä
+                                                             
+ Para cadastrar um novo Banco digite o c¢digo  do banco refe-
+ rente a inclus„o do banco ser  autom tica se  n„o  existir o
+ c¢digo digitado caso contr rio permitir  a altera‡„o.       
+                                                             
+ Ex.: 0027 BESC                                              
+      0001 BANCO DO BRASIL                                   
+                                                             
+ Escolha o item Bloqueto para configurar o lay-out do bloque-
+ to. Escolhida esta op‡„o vocˆ dever  informar se a impresso-
+ ra ‚ 80 colunas ou 132 colunas, compactar o bloqueto ( letra
+ maior ou menor), o espa‡amento  entre  as linhas (1/6 maior,
+ 1/8 menor) e a quantidade de linhas(dever  ser  acrescentado
+ o espa‡amento entre o bloqueto). Logo ap¢s  digitadas  estas
+ informa‡ƒes vocˆ ir  configurar o layout onde:              
+                                                             
+ F3      inserir um campo na posi‡„o do cursor;              
+ CTRL+T  apaga o campo do layout;                            
+ CTRL+W  grava as altera‡”es e retorna;                      
+ ESC     cancela altera‡”es;                                 
+                                                             
+ Para saber as teclas  disponiveis no editor, verifique a li-
+ nha da mensagem.                                            
+                                                      Ä Fim Ä

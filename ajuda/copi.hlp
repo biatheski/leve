@@ -1,0 +1,26 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ C¢pia de Seguran‡a Ä
+                                                             
+ Todo o computador est   sujeito  a  falhas, que podem causar
+ perda parcial ou total  dos dados. Para  precaver-se  contra
+ este tipo de problema, deve-se fazer periodicamente c¢pia de
+ seguran‡a dos dados.                                        
+                                                             
+ Estas c¢pias devem ser feitas  em disquetes,  utilizando  um
+ software de compacta‡„o (ARJ, PKZIP, LHA), ‚ recomendado que
+ se utilize um disquete para cada dia da semana, vocˆ  poder 
+ escrever na etiqueta o dia da semana (SEGUNDA, TER€A...).   
+                                                             
+ Quando o programa VECC, ‚ instalado,o mesmo copia para      
+ diret¢rio de instala‡„o dois arquivos de lote (BATCH):      
+                                                             
+ copia.bat     Faz a c¢pia de seguran‡a dos dados  utilizando
+               o compactador ARJ                             
+ volta.bat     Restaura a c¢pia de seguran‡a, antes de utili-
+               zar o sistema vocˆ dever  fazer REINDEXA€AO.  
+                                                             
+ Vocˆ poder  copiar estes dois arquivos para um diret¢rio que
+ esteja no PATH, junto com estes arquivos dever  estar o pro-
+ grama ARJ.                                                  
+                                                      Ä Fim Ä

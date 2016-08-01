@@ -1,0 +1,28 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Criar Layout da Nota Fiscal Ä
+                                                             
+ Para incluir um novo layout tecle Insert,  a  seguir  dever 
+ ser informado os seguintes campos:                          
+                                                             
+ Descri‡„o    nome da nota fiscal;                           
+                                                             
+ Impressora   modelo 80 Col( EPSON LX 300, LX 810 )          
+                    132 Col( EPSON FX 1170, RIMA 180 )       
+                                                             
+ Compactar    define a tamanho da linha:                     
+               80 Colunas - Compactar      132 caracteres    
+               80 Colunas - N„o Compactar   80 caracteres    
+              132 Colunas - Compactar      232 caracteres    
+              132 Colunas - N„o Compactar   80 caracteres    
+                                                             
+ Espa‡amento  1/6" Normal, 1/8" Menor                        
+                                                             
+ Qt.Linhas    quantidade de linhas da nota fiscal;           
+                                                             
+ Qt.Itens     quantidade de itens da nota fiscal;            
+                                                             
+ Definidos estes campos vocˆ passar  para o  layout  da  nota
+ fiscal, tecle F3 para incluir o campo na posi‡„o no cursor. 
+ Para gravar o layout tecle CTRL+W.                          
+                                                      Ä Fim Ä

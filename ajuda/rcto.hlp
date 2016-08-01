@@ -1,0 +1,79 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Recebimentos Contas a Receber Ä
+                                                             
+ E' nesta tela onde vocˆ baixar  a nota informando  a data de
+ vencimento, juros, descontos. Se o valor pago for menor  que
+ o total da nota o sistema perguntar  se  deseja  lan‡ar  uma
+ nova parcela.                                               
+                                                             
+ Para vocˆ emitir recibos execute os seguintes procedimentos:
+                                                             
+ Tecle F2, escolha a op‡„o Clientes, digite o  nome desejado,
+ tecle ALT+E para acessar o Contas a Receber. Nesta tela vocˆ
+ poder  imprimir um recibo  teclando  ALT+R o sistema lan‡ar 
+ o recebimento automaticamente, mas vocˆ poder  tamb‚m infor-
+ mar o valor pago ALT+V. "Observe a linha da observa‡„o"     
+                                                             
+ Utilize a tecla ALT+0 para excluir do sistema todas as notas
+ que o tipo for Pedido e limpar o arquivo  de  pedidos, desta
+ forma ficar  no sistema somente as notas fiscais.           
+                                                             
+ E' importante que vocˆ fa‡a c¢pia de seguran‡a de seus dados
+ diariamente, uma  sugest„o  seria  utilizar um disquete para
+ cada dia da semana: Segunda, Ter‡a, Quarta...               
+                                                             
+ Esta opera‡„o poderia ser feita com  utilizando  um programa
+ compacta‡„o, vocˆ poderia criar arquivos de lote (BATCH) pa-
+ ra facilitar:                                               
+                                                             
+ Utilizando o compactador ARJ, no prompt do MS-DOS digite:   
+                                                             
+ c:\>copy con copia.bat                                      
+     @echo off                                               
+     cd\vecc                                                 
+     del a:veccarq.arj                                       
+     cls                                                     
+     arj a -jt -r -va a:veccarq *.db? *.ico *.bat *.sys      
+     cd\                                                     
+     digite CTRL+Z para gravar.                              
+                                                             
+ Para restaurar a c¢pia de seguran‡a o procedimento ‚:       
+                                                             
+ c:\>copy con volta.bat                                      
+     @echo off                                               
+     cd\vecc                                                 
+     cls                                                     
+     arj x -va -y a:veccarq                                  
+     cd\                                                     
+     digite CTRL+Z para gravar.                              
+                                                             
+                                                             
+ Utilizando o compactador PKZIP:                             
+                                                             
+ c:\>copy con copia.bat                                      
+     @echo off                                               
+     cd\vecc                                                 
+     del a:\veccarq.zip                                      
+     cls                                                     
+     pkzip -ex-&-rp a:\veccarq *.db? *.ico *.bat *.sys       
+     cd\                                                     
+     digite CTRL+Z para gravar.                              
+                                                             
+ Restaurar a c¢pia de seguran‡a:                             
+                                                             
+ c:\>copy con volta.bat                                      
+     @echo off                                               
+     cd\vecc                                                 
+     cls                                                     
+     pkunzip a:\veccarq                                      
+     cd\                                                     
+     digite CTRL+Z para gravar.                              
+                                                             
+ Criados estes arquivos de lote, quando vocˆ for fazer a  c¢-
+ pia de seguran‡a vocˆ dever  apenas colocar  o  disquete  no
+ drive digitar COPIA, para restaurar os dados do disquete di-
+ gite VOLTA (‚ importante ap¢s a restaura‡„o dos dados que se
+ fa‡a a Reindexa‡„o do sistema).                             
+                                                             
+                                                      Ä Fim Ä

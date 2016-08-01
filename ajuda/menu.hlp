@@ -1,0 +1,331 @@
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Sistema Integrado LEVE Ä
+                                                             
+   Contas a Pagar                   Controle de Estoque      
+   Contas a Receber                 Fluxo de Caixa e C/C     
+   Emissor Cupom Fiscal             Ordem de Servi‡o         
+                                                             
+   O Sistema  foi  criado em  formato de menus (top-down) com
+ janelas sobrepostas o que facilita muita a opera‡„o do usu -
+ rio. Assim se pode trabalhar com v rias informa‡”es ao mesmo
+ tempo, dispondo de trocas imediatas de janelas para  atuali-
+ za‡„o e cadastro de dados.                                  
+                                                             
+ A sua grande vantagem, entre outras, est  na agilidade e ra-
+ pidez de utiliza‡„o, pois disp”e de todas  as opera‡”es  sem
+ ter a necessidade de sair do sistema e entrar em outro.     
+                                                             
+ A leitura desta ajuda ‚ indispens vel e obrigat¢ria para que
+ se obtenha melhores resultados e que se aprenda todos os re-
+ cursos do sistema, acessando a ajuda dentro das telas de ca-
+ dastro  vocˆ  saber   mais  sobre os atalhos dos programas e
+ sempre observe a linha da  mensagem (£ltima linha), ela con-
+ tˆm informa‡”es importantes.                                
+                                                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ ğ Ä
+                                                             
+ Menu de controle, ‚ neste menu  onde  est„o as configura‡”es
+ do sistema.                                                 
+                                                             
+ Empresas   Teclando nesta op‡„o surgir  um  submenu onde po-
+ ÄÄÄÄÄÄÄÄ   der  ser cadastrada uma empresa ou troc -la, para
+            trocar de empresa em qualquer  lugar  do  sistema
+            utilize a tecla <Tab>.                           
+                                                             
+ Configura‡”es  E' neste  menu onde est„o as configura‡”es do
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄ  sistema: Usu rios,  Nota Fiscal,  Paramˆtros,
+                Acessos...                                   
+                                                             
+ Paramˆtros  Utilize esta op‡„o para configurar o sistema    
+ ÄÄÄÄÄÄÄÄÄÄ  conforme a necessidade de sua empresa:          
+                                                             
+           Prote‡„o Tela Ä define o tipo prote‡„o de tela;   
+                   Caixa Ä utilize esta op‡„o para o  sistema
+                           lan‡ar no caixa autom tico  quando
+                           vocˆ receber uma nota ou pagar uma
+                           conta;                            
+                Comiss„o Ä define se a relat¢rio  de comiss„o
+                           ser  gerado pelo Contas a  Receber
+                           (Pendente e Liberada) ou pedido.  
+           Cons. Produto Ä Alterando esta op‡„o, vocˆ  poder 
+                           consultar os produtos,  escolhendo
+                           primeiro seu Grupo, SubGrupo e lo-
+                           go os produtos referentes.        
+             Nota Fiscal Ä define o tipo de layout;          
+                Etiqueta Ä define o tipo de layout;          
+               Duplicata Ä define o tipo de layout;          
+             Nota Promi. Ä define o layout da n. promiss¢ria 
+                   Carnˆ Ä define o layout do carnˆ          
+                                                             
+             Vocˆ tamb‚m poder  deixar o  sistema gerar o c¢-
+             digo de pedidos, or‡amentos, entradas/sa¡das... 
+                                                             
+             Para utilizar este recurso quando for digitar um
+             pedido no campo do c¢digo do pedido  digite ZERO
+             e tecle ENTER, os valores  destes  campos  est„o
+             nesta tela.                                     
+                                                             
+            "Altere os valores somente  se vocˆ souber o  que
+             est  alterando."                                
+                                                             
+             Querendo imprimir  o  slogan  de sua empresa nos
+             pedidos e or‡amentos, digite o texto nesta tela.
+                                                             
+             Vocˆ poder  consultar as contas do cliente  ap¢s
+             sua escolha, utilize esta op‡„o para ativ -la.  
+                                                             
+             N„o querendo que apare‡a a palavra Juros na  im-
+             press„o do recibo utilize esta op‡„o para desati
+             v -la.                                          
+                                                             
+             Se desejar informar o periodo de sele‡„o do con-
+             tas a receber/pagar durante a consulta, habilite
+             aqui esta op‡„o.                                
+                                                             
+             Caso n„o deseje que o Nome e Endere‡o de sua em-
+             presa apare‡a nos pedidos, desabilite aqui  esta
+             op‡„o.                                          
+                                                             
+             Querendo incluir cliente pessoa Jur¡dica na con-
+             sulta habilite aqui esta op‡„o.                 
+                                                             
+             A dica do dia tamb‚m poder  ser desabilitada.   
+             Vocˆ poder  colocar uma tolerancia em dias para 
+             o sistema come‡ar calcular os juros  do contas a
+             receber, a Taxa de juros poder  tamb‚m ser digi-
+             ta aqui.                                        
+                                                             
+             Enfim inumeras configura‡”es poder„o ser realiza
+             das, adequando desta forma o Sistema as caracte-
+             riscas de sua Empresa.                          
+                                                             
+ DOS Shell   Sa¡da r pida para o MS-DOS, para retornar digite
+ ÄÄÄÄÄÄÄÄÄ   Exit, a tecla de atalho ‚ Shift + F10;          
+                                                             
+ Sair do Sistema  Para sair do  sistema  vocˆ poder  utilizar
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  as teclas de atalho F10  e  Alt+F4  ou  Esc
+                  sucessivamente.                            
+                                                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Arquivos Ä
+                                                             
+ E' no menu de arquivos onde dever  ser cadastradas a  infor-
+ ma‡ƒes b sicas para come‡ar a utilizar o sistema. Para saber
+ mais  sobre  determinada op‡„o pressione F1 dentro da janela
+ de cadastro correspondente.                                 
+                                                             
+ Para incluir apenas digite o  c¢digo  referente, a  inclus„o
+ ser  autom tica se n„o existir  o  c¢digo digitado caso con-
+ tr rio permitir  a altera‡„o. As teclas disponiveis no campo
+ do c¢digo s„o:                                              
+                                                             
+ PGUP        registro anterior;                              
+ PGDN        pr¢ximo registro;                               
+ CTRL+PGUP   primeiro registro;                              
+ CTRL+PGDN   ultimo registro;                                
+ ESC         cancela e retorna;                              
+ ENTER       aceita a entrada e continua;                    
+ CTRL+Y      apaga o campo;                                  
+ HOME        inicio do campo;                                
+ END         final do campo;                                 
+ DEL         apaga o caracter sob o cursor;                  
+ BACKSPACE   apaga o caracter a esquerda do cursor;          
+ SETA CIMA   campo acima                                     
+ SETA BAIXO  campo abaixo                                    
+ TAB         campo abaixo                                    
+                                                             
+ Digitados todos os campos vocˆ poder :                      
+                                                             
+ Imprimir    permite a impress„o do arquivo correspondente;  
+ Excluir     excluir o registro correspondente;              
+ Confirmar   confirma inclus„o ou altera‡„o;                 
+ Cancela     cancela altera‡„o ou inclus„o;                  
+                                                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Relat¢rios Ä
+                                                             
+ E' neste menu onde poder„o ser obtidas as informa‡”es cadas-
+ tradas, teclando em  qualquer  op‡„o vocˆ notar  que surgir 
+ uma janela com os intervalos de sele‡„o, digitanto 0 ou um  
+ codigo inexistente surgira  a consulta referente, logo deve-
+ r  ser informado a destino do relat¢rio: Video ou Impressora
+                                                             
+ Caso o relat¢rio seja visualizado utilize as teclas para mo-
+ vimentar o relat¢rio:                                       
+                                                             
+ Home             Move para o inicio da linha;               
+ End              Move para o final da linha;                
+ Ctrl+Home        Move para o inicio da p gina;              
+ Ctrl+End         Move para o fim da p gina;                 
+ Page Up          Move para a inicio da janela;              
+ Page Down        Move para a fim da janela;                 
+ Ctrl+Page Up     Move para o inicio da p gina;              
+ Ctrl+Page Down   Move para o final da p gina;               
+ Enter            Move para o inicio da pr¢xima linha;       
+ Ctrl+Enter       Move para o inicio da pr¢xima p gina;      
+ Ctrl+A           Move para o inicio da p gina anterior;     
+                                                             
+ Todos os relat¢rios impressos ou visualizados  ficar„o arma-
+ zenados no Spool de Impress„o, os arquivos textos dos rela -
+ torios est„o no \LEVE\SPOOL                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Processos Ä
+                                                             
+ E' neste  menu  que  est„o  as  particularidades do sistema,
+ acesse a ajuda F dentro da tela de cada item para saber mais
+ do item.                                                    
+                                                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Utilit rios Ä
+                                                             
+ Reindexa‡„o  Por motivos de queda energia e outros inerentes
+ ÄÄÄÄÄÄÄÄÄÄÄ  ao computador. O sistema pode  apresentar  pro-
+              blemas  com  os arquivos de ¡ndices, provocando
+              problemas do tipo:                             
+              N„o encontra uma informa‡„o;                   
+              Apresenta informa‡”es desordenadamente na tela;
+              Perde o controle de algumas informa‡”es;       
+                                                             
+              Para solucionar o problema utilize esta  op‡„o,
+              se n„o for poss¡vel executar esta opera‡„o por-
+              que existe outros usu rios utilizando o sistema
+              ser  emitido um alerta, caso  n„o  exista  vocˆ
+              poder  continuar. Vocˆ poder  apagar os  arqui-
+              vos de Indices (NTX) que  ter   o  mesmo resul-
+              tado, apague os arquivos de todos os subdiret¢-
+              rios do LEVE.                              
+                                                             
+ Spool de Impress„o   Todos os relat¢rios emitidos ficam aqui
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ   arquivados para que  no  futuro  possam
+                      ser emitidos novamente, tecle ENTER  em
+                      cima do  relat¢rio  correspondente para
+                      selecion -lo, DELETE para excluir.     
+                                                             
+ Cores  O sistema LEVE deve ser definido colorido ou de dife-
+ ÄÄÄÄÄ  rentes tonalidades conforme seu monitor de v¡deo.    
+        Acessando a op‡„o cores surgir  um submenu contendo: 
+        Fundo, Cabe‡alho, Menu, Tecla Menu...                
+        Cada op‡„o abre uma janela com "texto exemplo" e pos-
+        sibilitando a troca de cores de cada op‡„o, sendo 16 
+        cores para as letras e 8 cores para o fundo.         
+        Se vocˆ fizer uma altera‡„o nas cores e ficar estra- 
+        nho, utilize  a  op‡„o Padr„o do LEVE, para retornar 
+        as cores.                                            
+                                                             
+ Mala Direta  Acessando a op‡„o mala direta aparecer  um sub-
+ ÄÄÄÄÄÄÄÄÄÄÄ  menu contendo: Agenda, Aniversariantes e Etiq.,
+              a agenda tamb‚m poder  ser acessada por sua te-
+              cla de atalho F2                               
+                                                             
+              Agenda: Um cadastro comum com: nome, endere‡o; 
+              Aniversariantes: emiss„o de relat¢rio;         
+              Etiqueta: emiss„o de etiqueta da agenda;       
+                                                             
+ Consulta  Vocˆ poder  acessar a consulta tamb‚m  atrav‚s  de
+ ÄÄÄÄÄÄÄÄ  sua tecla de atalho F2, ‚ nesta consulta onde vocˆ
+           poder  acessar todas  as  informa‡ƒes de uma forma
+           r pida e segura.                                  
+                                                             
+           Produtos: Estando  a  barra  luminosa na coluna do
+           c¢digo vocˆ consultar  por n£mero, posicionando na
+           coluna da descri‡„o a  consulta ‚ alfab‚tica, para
+           consultar apenas digite a palavra ou c¢digo deseja
+           do. Utilize as teclas disponiveis:                
+                                                             
+           Alt+R   vocˆ poder  reajustar individualmente;    
+           Alt+U   consultar  todas as compras deste produto;
+           Alt+O   cota‡„o de pre‡o deste produto;           
+           Alt+P   condi‡”es de pagamentos;                  
+           Alt+H   hist¢rico/descri‡„o;                      
+           Insert  incluir com c¢digo autom tico;            
+           Alt+A   alterar produto referente;                
+                                                             
+           Clientes: Nesta tela vocˆ tamb‚m poder  consultar:
+           c¢digo, nome, endere‡o, endere‡o, bairro, cidade. 
+                                                             
+           As teclas disponiveis s„o:                        
+                                                             
+           Alt+E   consulta as contas a receber;             
+           Alt+P   consulta as contas pagas;                 
+           Alt+H   consulta os cheques;                      
+           Alt+N   consulta as Notas e Pedidos;              
+           Alt+V   devolu‡”es de produtos;                   
+           Alt+O   consulta as Ordem de Servi‡os;            
+           Alt+A   altera o cliente correspondente;          
+           Insert  incluir cliente com c¢digo autom tico     
+                   caso deseje incluir um cliente F¡sica con-
+                   figure a op‡„o nos Paramˆtros.            
+                                                             
+           Fornecedores: A consulta tamb‚m poder   ser  feita
+           por c¢digo, nome, endere‡o, bairro, cidade. As te-
+           clas disponiv‚is s„o:                             
+                                                             
+           Alt+P   consulta das contas a pagar;              
+           Alt+G   consulta das contas pagas;                
+           Alt+N   consulta as notas de entrada;             
+           Alt+A   alterar o fornecedor correspondente;      
+           Insert  incluir fornecedor com c¢digo autom tico; 
+                                                             
+           Contas a Receber: consulta de  todas  as  Contas a
+           receber aberta, as teclas disponiveis s„o:        
+                                                             
+           Alt+R   imprimir recibo                           
+           Enter   recebimento manual                        
+           Espa‡o  marca ou desmarca nota                    
+           Alt+P   recebimento autom tico das notas marcadas 
+                                                             
+           Contas a Pagar: consulta  todas  as Contas a Pagar
+           aberta, nesta tela vocˆ poder :                   
+           Enter   pagamento manual                          
+           Espa‡o  marca ou desmarca nota                    
+           Alt+P   pagamento autom tico das notas marcadas   
+                                                             
+           Agenda: consulta do arquivo de agenda. Teclas dis-
+           poniv‚is: Alt+A para alterar, Insert incluir,Alt+F
+           aciona a pesquisa da agenda, a pesquisa ser  feita
+           na coluna da barra luminosa, para fazer a pesquisa
+           escolha a op‡„o de procura e digite o texto.      
+                                                             
+ Prote‡„o de Tela  Os pixel de video poder„o queimar se fica-
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  rem algum tempo ser acionadas e desaciona-
+                   dos. Para que isto n„o  ocorra  esta op‡„o
+                   deixa no video um quebra-cabe‡a ou uma te-
+                   la em movimento.  Portanto  se  necess rio
+                   deixar o computador sem uso, este movimen-
+                   to poder  ajud -lo. A tecla F5  chama esta
+                   op‡„o em qualquer lugar do sistema. Estan-
+                   do a prote‡„o acionada tecla ESC para sair
+                                                             
+ Calend rio Permanente  seta para cima avan‡a  os anos,  seta
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  para baixo retrocede, seta para direi
+                        ta avan‡a os meses e seta para esquer
+                        da retrocede. A tecla de atalho ‚ F6.
+                                                             
+ Calculadora  E'  uma  calculadora  simples de 4 opera‡„o com
+ ÄÄÄÄÄÄÄÄÄÄÄ  mem¢ria £nica, esta calculadora poder  ser uti-
+              lizada com o teclado num‚rico ou o convencional
+                                                             
+              Com o padr„o as teclas s„o:                    
+              +           adi‡„o;                            
+              -           subtra‡„o;                         
+              *           multiplica‡„o;                     
+              /           divis„o;                           
+              % ou P      percentual;                        
+              Enter ou =  igualdade;                         
+              M+          armazena na mem¢ra;                
+              M-          retira da mem¢ria;                 
+              MR          chama o valor da mem¢ria;          
+              Del ou <-   apaga o ultimo digito;             
+              C           limpa;                             
+                                                             
+              A calculadora poder  ser  chamada  em  qualquer
+              lugar do sistema com a tecla F9, caso ao chama-
+              la ela posicionou em cima da tela  que continha
+              o valor desejado para soma,  utilize  as  setas
+              para movimentar.                               
+                                                             
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ F1 Ajuda Ä
+                                                             
+ O sistema integrado LEVE possue uma ajuda on-line que  pode-
+ r  ser acessada em que qualquer lugar do sistema  atrav‚s da
+ tecla de atalho F1, sem ‚ lembrar que a melhor ajuda est  no
+ rodape "ultima linha da tela".                              
+                                                             
+ Sobre  Nesta  tela  temos  um resumo informativo do sistema,
+ ÄÄÄÄÄ  como nome do usu rio, n§ serie e autor.              
+                                                      Ä Fim Ä

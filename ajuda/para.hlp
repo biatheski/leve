@@ -1,0 +1,16 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Paramˆtros do Sistemas Ä
+                                                             
+ Atrav‚s do prompt do MS-DOS vocˆ  poder   passar  paramˆtros
+ para os sistema:                                            
+                                                             
+ /INDICE        Apaga todos os indices do sistema;           
+ /LIMPEZA       Apaga os arquivos tempor rios do sistema;    
+ /AJUDA ou /?   Tela de Ajuda;                               
+                                                             
+ Exemplo:                                                    
+                                                             
+ C:\VECC>VECC /LIMPEZA                                       
+                                                             
+                                                      Ä Fim Ä

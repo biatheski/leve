@@ -1,0 +1,48 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Nota Fiscal Ä
+                                                             
+ Para incluir uma nova  Nota Fiscal digite o n§, a seguir de-
+ ver  ser digitados os campos referentes.Vocˆ poder   incluir
+ durante a digita‡„o da nota cadastrar um novo cliente, alte-
+ rar transportadora, produtos... ( Na janela da consulta  te-
+ cle INSERT para lan‡ar o c¢digo autom tico e ALT+A  alterar,
+ Ex.: Quando for digitar o c¢digo  do  representante digite 0
+ ou c¢digo inexistente e  ent„o  surgir  a janela de consulta
+ agora tecle INSERT ou ALT+A)                                
+                                                             
+ Os procedimentos para lan‡ar um produto:                    
+                                                             
+ Digite o c¢digo do produto ( se n„o souber o c¢digo digite 0
+ e tecle ENTER ou um c¢digo inexistente surgir   uma consulta
+ onde vocˆ poder  consultar os produtos apenas digitando  seu
+ nome ou incluir um novo item para  isso  tecle INS o sistema
+ gerar  o c¢digo autom tico  se  desejar apenas alterar tecle
+ ALT+A), quantidade de itens, o percentual de  comiss„o indi-
+ vidual (este percentual ‚ utilizando se a comiss„o ‚ indivi-
+ dual por produto, caso n„o seja utilize o percentual fixo no
+ cadastro de representantes) e o pre‡o de venda.             
+                                                             
+ Na inclus„o dos produtos o sistema estar  num browse,se vocˆ
+ estiver digitando uma nova Nota Fiscal o sistema  entrar  em
+ modo de inclus„o no browse. Terminada a digita‡„o  dos itens
+ tecle ESC, note que o cursor voltou ao browse agora vocˆ po-
+ der  navegar utilizando as setas. Para excluir um item posi-
+ cione  em  cima o item desejado e tecle DEL e se desejar in-
+ cluir uma observa‡„o tecle ALT+O. Para  finalizar  o  browse
+ tecle . "ponto", observe a linha a observa‡„o (ultima linha)
+                                                             
+ Agora vocˆ informar  os descontos da Nota Fiscal: ICMS, IPI,
+ Seguro, Frete ( ao lado do campo do frete um existe um campo
+ onde dever   ser informado  se o frete ‚ 1 ou 2 ), informado
+ os descontos surgir  uma tela para ser informada a  condi‡„o
+ de pagamento ‚ aqui  onde  ser„o  definidas as parcelas para
+ gerar o Contas a Receber. O sistema  automaticamente baixar 
+ o estoque.                                                  
+                                                             
+ Para definir o lay-out da Nota Fiscal acesse o item;        
+                                                             
+ Configura‡”es -> Nota Fiscal                                
+                                                             
+ Veja Contas a Receber                                       
+                                                      Ä Fim Ä

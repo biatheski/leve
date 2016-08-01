@@ -1,0 +1,117 @@
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Produtos Ä
+                                                             
+ Para cadastrar um novo Produto, basta vocˆ digitar o  c¢digo
+ n£merico referente, a inclus„o ser  autom tica se n„o  exis-
+ tir o c¢digo digitado, caso contr rio  permitir   altera‡„o,
+ vocˆ tamb‚m poder  incluir um produto ou alter -lo durante a
+ digita‡„o de um Pedido, Nota Fiscal, Or‡amento...           
+                                                             
+ A seguir vem os campos a serem digitados:                   
+                                                             
+ C¢d. Barras: c¢digo de barras                               
+         Ex.: 788534606264                                   
+                                                             
+ Referˆncia: c¢digo de referˆncia                            
+        Ex.: XYZ23456                                        
+                                                             
+ Descri‡„o: nome do produto                                  
+       Ex.: TINTA ACRILICA AMARELA 30 LTS.                   
+                                                             
+ Fornecedor: c¢digo, se vocˆ n„o souber o c¢digo do fornece- 
+             dor digite 0 e tecle ENTER surgir  uma consulta 
+             com os fornecedores cadastrados, tecle INS para 
+             incluir e ALT+A alterar, "observe linha da men- 
+             sagem"                                          
+                                                             
+        Ex.: 0001 CASA DAS TINTAS                            
+                                                             
+ Grupo: c¢digo, se vocˆ digitar um c¢digo que n„o existe tam-
+        b‚m surgir  uma consulta com  os  grupos cadastrados,
+        tecle INS incluir, ALT+A alterar.                    
+                                                             
+   Ex.: 01 TINTAS                                            
+                                                             
+ SubGrupo: subgrupo, caso o c¢digo n„o seja informado  abrir 
+           uma consulta com  os  subgrupos cadastrados, tecle
+           INS para incluir e ALT+A alterar.                 
+                                                             
+      Ex.: 01 ACRILICA                                       
+                                                             
+ Unidade: unidade do produto;                                
+                                                             
+     Ex.: CX, UN, PCT                                        
+                                                             
+ Cod.Tribu.: c¢digo tribut rio;                              
+                                                             
+        Ex.: 1                                               
+                                                             
+ Cl. Fiscal: classifica‡„o fiscal;                           
+                                                             
+        Ex.: 2                                               
+                                                             
+ Peso Liqu.: peso l¡quido;                                   
+                                                             
+        Ex.: 0,600                                           
+                                                             
+ C¢d. do IPI: c¢digo do IPI;                                 
+                                                             
+         Ex.: 1243574217                                     
+                                                             
+  % : percentual do IPI;                                     
+                                                             
+ Ex.: 10,0                                                   
+                                                             
+ Perc.Comis.: percentual de comiss„o por produto;            
+         Ex.: 1,0                                            
+                                                             
+ Pre‡o Custo: pre‡o de custo da mercadoria;                  
+                                                             
+         Ex.: 1,45                                           
+                                                             
+ Percentual: percentual de lucro sobre o pre‡o de custo;     
+                                                             
+        Ex.: 20,0                                            
+                                                             
+ Preco Venda: preco de venda do produto;                     
+                                                             
+         Ex.: 1,74                                           
+                                                             
+ Quantidade: quantidade em estoque;                          
+                                                             
+        Ex.: 10,0                                            
+                                                             
+ Caixa: quantidade de unidades em uma caixa, caso a quantida-
+        de informada na venda seja diferente que  contida  na
+        caixa emitir  um alerta.   Ex.:  1,0                 
+                                                             
+ Custo Estq.: custo do estoque (pre‡o de  custo  multiplicado
+              pela quantidade)                               
+                                                             
+         Ex.: 14,50                                          
+                                                             
+ Valor Estq.: valor do estoque (pre‡o de  venda  multiplicado
+              pela quantidade)                               
+                                                             
+         Ex.: 17,70                                          
+                                                             
+ Estq.Minimo: estoque m¡nimo de produto                      
+                                                             
+         Ex.: 3,0                                            
+                                                             
+ Dt.Ult.Ent.: data da ultima  entrada, automaticamente quando
+              vocˆ faz uma entrada a  data  ‚  repassada para
+              este campo;                                    
+         Ex.: 03/12/1995                                     
+                                                             
+ Dt.Ult.Sa¡da: data da ultima sa¡da, o mesmo ocorre;         
+                                                             
+          Ex.: 10/11/1995                                    
+                                                             
+ Hist¢rico: Nesta op‡„o vocˆ poder  descrever um pouco  sobre
+            o  produto, para  salvar  pressione  Ctrl+W, para
+            acessar o hist¢rico rapidamente durante a consul-
+            ta de produtos pressione Alt+H.                  
+                                                             
+ Agora vocˆ poder : Confirmar, Cancelar, Excluir ou Imprimir.
+                                                             
+                                                      Ä Fim Ä

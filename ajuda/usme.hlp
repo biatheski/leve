@@ -1,0 +1,37 @@
+
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Acessos do Menu Ä
+                                                             
+ Para configurar os acessos dos usu rios ao menu utilize esta
+ op‡„o, vocˆ dever  informar a Empresa e o Menu:             
+                                                             
+                      Empresa        Menu                    
+ ğ                       0001    01.00.00                    
+   Configura‡”es         0001    01.02.00                    
+   Empresas              0001    01.01.00                    
+                                                             
+ Arquivos                0001    02.00.00                    
+   Clientes              0001    02.01.00                    
+   Vendas                0001    02.02.00                    
+   Caixa                 0001    02.03.00                    
+                                                             
+ Relat¢rios              0001    03.00.00                    
+   Vendas                0001    03.01.00                    
+     Emitir              0001    03.01.01                    
+   Contas a Receber      0001    03.02.00                    
+   Clientes              0001    03.03.00                    
+   Contas a Pagar        0001    03.04.00                    
+                                                             
+ Processos               0001    04.00.00                    
+   Vendas                0001    04.01.00                    
+   Cheques               0001    04.04.00                    
+                                                             
+ Utilit rios             0001    05.00.00                    
+   Cores                 0001    05.02.00                    
+                                                             
+ F1 Ajuda                0001    06.00.00                    
+                                                             
+ Informado o m¢dulo e menu surgir  os itens do menu  para vo-
+ cˆ configurar os acessos utilize a Barra de Espa‡o para mar-
+ car e Delete para desmarcar.                                
+                                                      Ä Fim Ä
